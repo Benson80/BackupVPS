@@ -11,4 +11,4 @@ zip -r "$backup_file" $backup_dir
 rclone sync "$backup_file" tianyi:甲骨文VPS备份
 
 # 删除本地备份文件
-rm "$backup_file"
+#rm "$backup_file"
