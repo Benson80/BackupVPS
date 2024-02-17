@@ -1,11 +1,11 @@
 #!/bin/bash
 
 # 设置备份目录和备份文件名
-backup_dir="/"
+backup_dir="/etc /home /var /usr/local /root"
 backup_file="backup_$(date +'%Y%m%d_%H%M%S').zip"
 
 # 备份文件到 zip 压缩包
-zip -r "$backup_file" "$backup_dir"
+zip -r "$backup_file" $backup_dir
 
 # 备份完成后，使用 rclone 同步到天翼云盘
 rclone sync "$backup_file" tianyi:甲骨文VPS备份
