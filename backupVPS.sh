@@ -7,7 +7,7 @@ temp_dir="/tmp"
 backup_file="backup_$(date +'%Y%m%d_%H%M%S').zip"
 
 # 同步 rclone 挂载的路径到本地
-rclone sync tianyi:tianyicloud "$temp_dir"
+rclone sync tianyi:甲骨文VPS备份 "$temp_dir"
 
 # 备份文件到 zip 压缩包
 zip -r "$temp_dir/$backup_file" "$temp_dir/tianyicloud"
