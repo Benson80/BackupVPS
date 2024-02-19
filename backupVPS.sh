@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # 设置备份目录和备份文件名
-backup_dirs="/etc /home /var /root /boot"
+backup_dir="/etc /home /var /root /boot"
 backup_file="backup_$(date +'%Y%m%d_%H%M%S').zip"
 
 # 备份文件到 zip 压缩包
